@@ -26,7 +26,6 @@ class UserStore(private val context: Context) {
         }
     }
 
-
     val getId: Flow<String> = context.dataStore.data.map { preferences ->
         preferences[USER_ID] ?: ""
     }
@@ -41,9 +40,9 @@ class UserStore(private val context: Context) {
         preferences[USER_NAME] ?: ""
     }
 
-    suspend fun saveUserName(user_name: String) {
+    suspend fun saveUserName(username: String) {
         context.dataStore.edit { preferences ->
-            preferences[USER_NAME] = user_name
+            preferences[USER_NAME] = username
         }
     }
 
@@ -51,9 +50,9 @@ class UserStore(private val context: Context) {
         preferences[USER_COURSE_NAME] ?: ""
     }
 
-    suspend fun saveCourseName(course_name: String) {
+    suspend fun saveCourseName(courseName: String) {
         context.dataStore.edit { preferences ->
-            preferences[USER_COURSE_NAME] = course_name
+            preferences[USER_COURSE_NAME] = courseName
         }
     }
 }
