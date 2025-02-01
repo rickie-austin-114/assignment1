@@ -1,2 +1,3 @@
-# android-compose-store
-Simple Android Compose Datastore Example
+# MAPD721 Assignment 1
+
+Developed by Rickie Au (301458593)
